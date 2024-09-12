@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <h1>List of Positions</h1>
+    <ul>
+        {% for position in positions %}
+            <li>{{ position.name }}</li>
+        {% empty %}
+            <li>No positions available.</li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
